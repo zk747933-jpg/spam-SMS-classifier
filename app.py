@@ -2,6 +2,11 @@ import streamlit as st
 import pickle
 import string
 import nltk
+
+# NLTK data download (deployment fix)
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
+
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
@@ -28,11 +33,14 @@ def transform_text(text):
 
     for i in text:
         y.append(ps.stem(i))
+
     return " ".join(y)
 
+# Load vectorizer and model
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
+# Streamlit UI
 st.title("SMS Spam Classifier")
 
 input_sms = st.text_input("Enter your message")
@@ -48,9 +56,8 @@ if st.button("Predict"):
     # predict
     result = model.predict(vector_input)[0]
 
-    # display
+    # display result
     if result == 1:
         st.header("Spam")
     else:
         st.header("Not Spam")
-
