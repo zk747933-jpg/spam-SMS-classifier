@@ -46,7 +46,7 @@ sms-spam-classification
 Clone the repository:
 
 ```
-git clone https://github.com/zk747933-jpg/spam-SMS-classifier.git
+https://github.com/zk747933-jpg/spam-SMS-classifier
 ```
 
 Navigate to the project folder:
