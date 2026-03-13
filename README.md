@@ -46,7 +46,7 @@ sms-spam-classification
 Clone the repository:
 
 ```
-git clone https://github.com/your-username/sms-spam-classification.git
+git clone https://github.com/zk747933-jpg/spam-SMS-classifier.git
 ```
 
 Navigate to the project folder:
@@ -75,16 +75,31 @@ The application will open in your browser.
 
 ---
 
+## 🌐 Live Demo / Deployment
+
+You can try the live application here:
+
+```
+https://spam-sms-clacifier-babcaumsavegtqibm7hb82.streamlit.app/
+```
+
+Replace the above link with your deployed application link.
+
+---
+
 ## 🧠 How It Works
 
 1. User enters an SMS or email message.
+
 2. The message is preprocessed:
 
    * Lowercasing
    * Tokenization
    * Removing stopwords
    * Stemming
+
 3. The text is converted into numerical features using **TF-IDF Vectorizer**.
+
 4. The trained machine learning model predicts whether the message is **Spam** or **Not Spam**.
 
 ---
@@ -105,16 +120,6 @@ Spam
 
 ---
 
-## 🌐 Deployment
-
-This project can be deployed using:
-
-* Streamlit Cloud
-* Heroku
-* Render
-
----
-
 ## 👨‍💻 Author
 
 **Zishan Khan**
@@ -125,4 +130,4 @@ Aspiring **Data Scientist / Machine Learning Engineer**
 
 ## ⭐ If you like this project
 
-Give it a **star ⭐ on GitHub**.
+Give it a **star ⭐ on GitHub**
