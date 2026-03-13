@@ -5,6 +5,7 @@ import nltk
 
 # NLTK data download (deployment fix)
 nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
 nltk.download('stopwords', quiet=True)
 
 from nltk.corpus import stopwords
@@ -58,6 +59,6 @@ if st.button("Predict"):
 
     # display result
     if result == 1:
-        st.header("Spam")
+        st.header("🚨 Spam")
     else:
-        st.header("Not Spam")
+        st.header("✅ Not Spam")
